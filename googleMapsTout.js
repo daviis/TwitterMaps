@@ -1,9 +1,6 @@
 var map;
+google.maps.event.addDomListener(window, 'load', initialize);
 
-<<<<<<< HEAD
-=======
-
->>>>>>> userLocation
 function initialize() {
    var mapOptions = {
    center: findUserLocation(),
@@ -18,7 +15,6 @@ function initialize() {
       title: 'Hello World!'
    })
 }
-google.maps.event.addDomListener(window, 'load', initialize);
 
 var addMarkers = funciton(anArray){
     for (i=0;i<anArray.length;i++) {
@@ -32,8 +28,6 @@ var addMarkers = funciton(anArray){
 }
 //addMarkers()
 setTimeout(function() {addMarkers();},1250);
-<<<<<<< HEAD
-=======
 
 
 var findUserLocation = function(){
@@ -63,4 +57,3 @@ var findUserLocation = function(){
     return initialLocation;
   }
 }
->>>>>>> userLocation

@@ -9,7 +9,13 @@
     <script src="googleMapsTout.js"></script>
   </head>
   <body>
-    <div id="map-canvas"/>
+	<div id="searchSpace">
+		<form id="searchForm" action="cgi-bin/TwiterMapsCGI.py">
+			<input id="searchTerm" type="text" name="searchTerm" placeholder="Search Term">
+			<input id="searchButton" type="submit" value="Search" onclick="">
+		</form>
+	</div>
+	<div id="map-canvas"/>
   </body>
 </html>
 

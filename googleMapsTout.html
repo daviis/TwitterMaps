@@ -7,9 +7,16 @@
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVYhWqVLpAEA-BIS_v9ik3tE7BcOleNlQ&sensor=true">
     </script>
     <script src="googleMapsTout.js"></script>
+    <script src="getTwitterData.js"></script>
   </head>
   <body>
-    <div id="map-canvas"/>
+	<div id="searchSpace">
+		<form id="searchForm" action="cgi-bin/TwiterMapsCGI.py">
+			<input id="searchTerm" type="text" name="searchTerm" placeholder="Search Term">
+			<button id="searchButton" type="button" onclick="requestNewData()">Search</button>
+		</form>
+	</div>
+	<div id="map-canvas"/>
   </body>
 </html>
 

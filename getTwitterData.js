@@ -12,6 +12,6 @@ var requestNewData = function(){
 		}
 	}	
 
-	request.open("GET", URL, true)
+	request.open("GET", url, true)
 	request.send()
 }

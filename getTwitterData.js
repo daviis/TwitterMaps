@@ -1,5 +1,5 @@
 var requestNewData = function(){
-	var searchTerm = document.getElementById("searChTerm").value
+	var searchTerm = document.getElementById("searchTerm").value
 	var request = new XMLHttpRequest()
 	var url = "http://localhost:8000/cgi-bin/TwitterMapsCGI.py?searchTerm="+searchTerm
 	

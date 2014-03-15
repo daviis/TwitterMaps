@@ -7,7 +7,7 @@ var requestNewData = function(){
 		if(request.readyState == 4 && request.status == 200)
 		{
 			var responce = JSON.parse(request.responseText)
-			
+			console.log(responce)	
 			addMarkers(responce)
 		}
 	}	

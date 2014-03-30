@@ -7,9 +7,9 @@ var requestNewData = function(){
 	request.onreadystatechange = function(){
 		if(request.readyState == 4 && request.status == 200)
 		{
-			var responce = JSON.parse(request.responseText)
-			console.log(responce)	
-			addMarkers(responce)
+			var response = JSON.parse(request.responseText)
+			console.log(response)
+			addMarkers(response)
 		}
 	}	
 

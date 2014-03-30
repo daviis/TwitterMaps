@@ -9,20 +9,17 @@ function initialize() {
    map = new google.maps.Map(document.getElementById("map-canvas"),
    mapOptions);
 
-   var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(-33, 150),
-      map: map,
-      title: 'Hello World!'
-   })  
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
 var addMarkers = function(anArray) {
+    
     for (i=0;i<anArray.length;i++) {
-        var myLatlng = new google.maps.LatLng(latList[i].lat,latList[i].lon);
+
+        var myLatlng = new google.maps.LatLng(anArray[i].coordinates.coordinates[1],anArray[i].coordinates.coordinates[0]);
         var marker = new google.maps.Marker({
             position: myLatlng,
-            title:"Hello World!"
+            title:anArray[i].text
         });
         marker.setMap(map);
     }   

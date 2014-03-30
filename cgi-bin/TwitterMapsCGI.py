@@ -17,13 +17,15 @@ def respondWithTerms(listOfTerms):
         for item in api.request('statuses/filter', {'track':listOfTerms}):
 
             if item['geo'] != None:
-                print(json.dumps(item,sort_keys=True,indent=4))
+                # print(json.dumps(item,sort_keys=True,indent=4))
                 tweetList.append(item)
                 count+=1
-            if count==10:
-                print(json.dumps(tweetList))
+            if count==5:
+                # print(json.dumps(tweetList))
+                return tweetList
                 tweetList = []
-                count =0
+                count=0
+
                 # print(item['text'],item['coordinates'] if 'text' in item else item)
 
     except Exception as e:
@@ -34,16 +36,12 @@ print("Access-Control-Allow-Origin: *")
 print("")
 
 
-terms = "potato"
+
+
 if 'QUERY_STRING' in os.environ:
-    print(terms)
     search,term = os.environ['QUERY_STRING'].split('=')
     if search == 'searchTerms':
         terms = term
-        print(terms)
-        respondWithTerms(terms)
-
-
-
-# print(json.dumps(randlist))
+        tweet_resp = respondWithTerms(terms)
+        print(json.dumps(tweet_resp))
 

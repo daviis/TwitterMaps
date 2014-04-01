@@ -4,18 +4,15 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="googleMapsTout.css">
+    <link rel="stylesheet" href="theme.css">
     <script type="text/javascript"
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVYhWqVLpAEA-BIS_v9ik3tE7BcOleNlQ&sensor=true">
     </script>
-    <script src="googleMapsTout.js"></script>
+    <script src="googleMaps.js"></script>
     <script src="getTwitterData.js"></script>
   </head>
   <body>
 	<div id="searchSpace">
-		<form id="searchForm" action="cgi-bin/TwiterMapsCGI.py">
-		<form id="searchForm">
-			<input id="searchTerm" type="text" name="searchTerm" placeholder="Search Term">
 		<form id="searchForm" action="cgi-bin/TwitterMapsCGI.py">
 			<input id="searchTerm" type="text" name="searchTerms" placeholder="Search Term">
 			<button id="searchButton" type="button" onclick="requestNewData()">Search</button>
@@ -23,7 +20,6 @@
 	</div>
 	<div id="map-canvas">
 	</div>
-    </div>
   </body>
 </html>
 

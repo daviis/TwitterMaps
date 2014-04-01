@@ -3,7 +3,7 @@ requestNewData = function(){
 	var request = new XMLHttpRequest()
 	var urlSearchTerm = encodeURIComponent(searchTerm)
 	
-    var URL = "http://localhost:8000/cgi-bin/TwitterMapsCGI.py?searchTerms="+urlSearchTerm
+    	var URL = "http://localhost:8000/cgi-bin/TwitterMapsCGI.py?searchTerms="+urlSearchTerm
 	request.onreadystatechange = function(){
 		if(request.readyState == 4 && request.status == 200)
 		{
@@ -15,6 +15,6 @@ requestNewData = function(){
         }
 	}	
 
-	request.open("GET", url, true)
+	request.open("GET", URL, true)
 	request.send()
 }

@@ -1,14 +1,8 @@
 html { height: 100%; }
 body { height: 100%; margin: 0; padding: 0 }
-<<<<<<< HEAD
 #map-canvas { height: 95%; }
 #searchSpace { height: 5%;
 	min-height: 20px;
-=======
-#map-canvas { height: 95% }
-#searchSpace { height: 5%;
-	min-height: 20px
->>>>>>> d8dc4c0288a9b8ad08cede04862d4f3e9ec26bee
  }
 #searchTerm { width: 80%; }
 #searchButton { width: 15%; } 
